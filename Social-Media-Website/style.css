@@ -1,0 +1,187 @@
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1877f2;
+}
+
+header .search-bar input {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+header .nav-icons button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  background: #1877f2;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  margin: 20px;
+}
+
+/* Sidebar */
+.sidebar, .rightbar {
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.rightbar {
+  margin-left: 20px;
+}
+
+.profile-card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-card img {
+  border-radius: 50%;
+}
+
+.menu li {
+  list-style: none;
+  padding: 10px 0;
+  cursor: pointer;
+  color: #555;
+}
+
+.menu li:hover {
+  color: #1877f2;
+}
+
+/* Feed */
+.feed {
+  flex: 1;
+}
+
+.create-post {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.create-post textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: none;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.create-post button {
+  background: #1877f2;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Posts */
+.post {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.post h4 {
+  margin-bottom: 5px;
+}
+
+.post p {
+  color: #333;
+}
+
+ body { font-family: Arial; background:#f2f2f2; display:flex; align-items:center; justify-content:center; height:100vh; }
+    .box { background:white; padding:30px; width:350px; border-radius:12px; box-shadow:0 0 10px #ccc; }
+    input { width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px; }
+    button { width:100%; padding:12px; background:#2563eb; color:white; border:none; border-radius:8px; cursor:pointer; }
+    button:hover { background:#1e4fc5; }
+    a { font-size:14px; display:block; text-align:center; margin-top:10px; }
+
+     body { font-family: Arial; background:#f2f2f2; display:flex; align-items:center; justify-content:center; height:100vh; }
+    .box { background:white; padding:30px; width:350px; border-radius:12px; box-shadow:0 0 10px #ccc; }
+    input { width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px; }
+    button { width:100%; padding:12px; background:#10b981; color:white; border:none; border-radius:8px; cursor:pointer; }
+    button:hover { background:#0a8f68; }
+    a { font-size:14px; display:block; text-align:center; margin-top:10px; }
+
+    /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #d1d5db; /* gray-300 */
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #f3f4f6; /* gray-100 */
+        }
+        /* Applying the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .logout-link {
+    /* Remove default link underline */
+    text-decoration: none;
+    
+    /* Text color */
+    color: #fff; /* White */
+    
+    /* Background color (similar to the blue 'U' icon) */
+    background-color: #007bff; 
+    
+    /* Styling to make it circular or button-like */
+     
+    border-radius: 10px;/* To make it circular */
+    
+    /* Sizing and centering to fit the spot of the 'U' icon */
+    padding: 5px 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px; /* Approximate height */
+    width: 35px;  /* Approximate width */
+    cursor: pointer;
+}

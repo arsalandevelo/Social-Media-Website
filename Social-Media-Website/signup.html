@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Signup</title>
+<style>
+    body { font-family: Arial; background:#f2f2f2; display:flex; align-items:center; justify-content:center; height:100vh; }
+    .box { background:white; padding:30px; width:350px; border-radius:12px; box-shadow:0 0 10px #ccc; }
+    input { width:100%; padding:12px; margin:10px 0; border:1px solid #ccc; border-radius:8px; }
+    button { width:100%; padding:12px; background:#2563eb; color:white; border:none; border-radius:8px; cursor:pointer; }
+    button:hover { background:#1e4fc5; }
+    a { font-size:14px; display:block; text-align:center; margin-top:10px; }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Create Account</h2>
+
+    <input type="text" id="signupName" placeholder="Enter Name">
+    <input type="email" id="signupEmail" placeholder="Enter Email">
+    <input type="password" id="signupPass" placeholder="Enter Password">
+
+    <button onclick="signupUser()">Sign Up</button>
+
+    <a href="login.html">Already have an account? Login</a>
+</div>
+
+<script>
+function signupUser() {
+    let name = document.getElementById("signupName").value;
+    let email = document.getElementById("signupEmail").value;
+    let pass = document.getElementById("signupPass").value;
+
+    if (!name || !email || !pass) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    localStorage.setItem("userName", name);
+    localStorage.setItem("userEmail", email);
+    localStorage.setItem("userPass", pass);
+
+    alert("Signup Successful!");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

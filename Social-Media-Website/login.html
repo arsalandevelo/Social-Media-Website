@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+  <div class="bg-white shadow-xl rounded-lg p-8 w-full max-w-md">
+    <h2 class="text-2xl font-bold text-center mb-6">Login</h2>
+
+    <form onsubmit="loginUser(event)">
+      <input id="emailLogin" type="email" placeholder="Email Address" class="w-full border p-3 rounded mb-3" required>
+      <input id="passwordLogin" type="password" placeholder="Password" class="w-full border p-3 rounded mb-3" required>
+
+      <button class="w-full bg-blue-600 text-white py-3 rounded text-lg">Login</button>
+    </form>
+
+    <p class="text-center mt-4">Don't have an account?
+      <a href="signup.html" class="text-blue-600 font-semibold">Sign Up</a></p>
+  </div>
+
+  <script>
+    function loginUser(e) {
+      e.preventDefault();
+
+      const storedUser = JSON.parse(localStorage.getItem('user'));
+      const email = document.getElementById('emailLogin').value;
+      const password = document.getElementById('passwordLogin').value;
+
+      if (!storedUser) {
+        return alert('No user found! Please sign up first.');
+      }
+
+      if (email === storedUser.email && password === storedUser.password) {
+        alert('Login Successful!');
+        window.location.href = 'index.html'; // redirect to home page
+      } else {
+        alert('Incorrect email or password');
+      }
+    }
+  </script>
+
+</body>
+</html>
